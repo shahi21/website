@@ -40,7 +40,7 @@ body{
     transform: translateY(-50%);
 }
 
-/* Adjust control positions */
+
 #carouselExampleCaptions .carousel-control-prev {
     left: 10%;
 }
@@ -49,7 +49,7 @@ body{
     right: 10%;
 }
 
-/* Carousel Control Icons */
+
 #carouselExampleCaptions .carousel-control-prev-icon,
 #carouselExampleCaptions .carousel-control-next-icon {
     background-color: rgb(0, 136, 255);
@@ -57,7 +57,7 @@ body{
     padding: 10px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     #carouselExampleCaptions .carousel-control-prev,
     #carouselExampleCaptions .carousel-control-next {
@@ -118,55 +118,116 @@ body{
 
 
 /* STYLE FOR MIDDLE CAROUSEL */
+
+.middle-carousel {
+    background-color: white;
+    padding-bottom: 10px;
+    position: relative;
+    margin: -120px auto 0; /* Centers carousel */
+    width: 60%;
+}
+
 .middle-carousel .carousel-inner {
     display: flex;
 }
+
 .middle-carousel .carousel-item {
-    flex: 0 0 100%; /* Full width for the row */
+    flex: 0 0 100%;
 }
+
+
 .middle-carousel .carousel-item .row {
     display: flex;
     justify-content: center;
 }
+
+
 .middle-carousel .carousel-item img {
     width: 60%;
     height: auto;
     max-height: 100px;
     object-fit: contain;
 }
+
+
 .middle-carousel .col {
     flex: 1;
     min-width: 80px;
 }
-.middle-carousel {
-    background-color: white;
-    padding-top: 0%;
-    padding-bottom: 10px;
-    margin-right: 20%;
-    margin-left: 20%;
-    position: relative;
-    margin-top: -120px;
-    padding-left: 0%;
-    width: 60%;
-}
-#brandCarousel .carousel-control-prev, .carousel-control-next {
+
+
+#brandCarousel .carousel-control-prev,
+#brandCarousel .carousel-control-next {
     width: 8%;
-    margin: 4.5% ;
-    margin-top: 2%;
-    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-#brandCarousel .carousel-control-prev-icon, .carousel-control-next-icon {
+
+
+#brandCarousel .carousel-control-prev-icon,
+#brandCarousel .carousel-control-next-icon {
     background-color: rgb(0, 136, 255);
     border-radius: 0;
     padding: 10px;
-    
-  
 }
-       
+
+@media (max-width: 1024px) {
+    .middle-carousel {
+        width: 75%;
+        margin-top: -100px;
+    }
+
+    .middle-carousel .carousel-item img {
+        width: 70%;
+        max-height: 80px;
+    }
+
+    #brandCarousel .carousel-control-prev,
+    #brandCarousel .carousel-control-next {
+        width: 6%;
+    }
+}
+
+@media (max-width: 768px) {
+    .middle-carousel {
+        width: 85%;
+        margin-top: -80px;
+    }
+
+    .middle-carousel .carousel-item img {
+        width: 80%;
+        max-height: 70px;
+    }
+
+    #brandCarousel .carousel-control-prev,
+    #brandCarousel .carousel-control-next {
+        width: 5%;
+    }
+}
+
+@media (max-width: 320px) {
+    .middle-carousel {
+        width: 95%;
+        margin-top: -90px;
+    }
+
+    .middle-carousel .carousel-item img {
+        width: 90%;
+        max-height: 60px;
+    }
+
+    #brandCarousel .carousel-control-prev,
+    #brandCarousel .carousel-control-next {
+        width: 8%;
+        
+    }
+}
+  
         
         
 /* styles for industry solutions */
-/* Industry Solutions Section */
+
 .industry-solutions {
     padding: 60px 0;
     background-color: #f6f6f6;
@@ -177,7 +238,7 @@ body{
     text-decoration: none;
 }
 
-/* Industry Cards */
+
 .industry-solutions .card-link {
     text-decoration: none;
 }
@@ -192,7 +253,7 @@ body{
     transform: translateY(-5px);
 }
 
-/* Carousel Controls */
+
 .industry-solutions .carousel-control-prev,
 .industry-solutions .carousel-control-next {
     position: absolute;
@@ -210,7 +271,6 @@ body{
     right: -60px;
 }
 
-/* Customizing the Carousel Controls */
 #industryCarousel .carousel-control-prev,
 #industryCarousel .carousel-control-next {
     background-color: #0073cf;
@@ -222,7 +282,7 @@ body{
     border-radius: 5px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .industry-solutions {
         padding: 50px 0;
@@ -349,9 +409,7 @@ body{
 /* style for section after center of execllence */
 
 .carousel-content {
-    /* width: 100%;
-    display: flex;
-    justify-content: space-between; */
+  
     background: linear-gradient(to right, #007bff, #6aafcc); /* Adjust colors */
     color: white; 
     padding: 1rem; 
@@ -371,11 +429,6 @@ body{
 }
 
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    /* filter: invert();  */
-    
-}
 
 .carousel-control-prev {
     left: -90px; 
@@ -501,7 +554,7 @@ body{
     margin-bottom: 30px;
 }
 
-/* Cards Layout */
+
 .customer-success-stories .card-container {
     display: flex;
     justify-content: center;
@@ -510,7 +563,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* Individual Card Styling */
+
 .customer-success-stories .card {
     width: 32%;
     background: #1E3A5F;
@@ -581,30 +634,29 @@ body{
 
 
 /* styles for technology partners */
-/* Technology Partners Section */
+
 .technology-partners {
     background-color: rgb(232, 231, 231);
     padding: 10px 0 90px;
 }
 
-/* Ensure Images Fit */
+
 .technology-partners .fixed-img {
     width: 100%;
     height: 80px;
     object-fit: contain;
 }
 
-/* Centering Carousel Items */
+
 .technology-partners .carousel-item .row {
     justify-content: center;
 }
 
-/* Carousel Animation */
+
 .technology-partners .carousel-item {
     transition: transform 0.6s ease-in-out;
 }
 
-/* Carousel Controls */
 .technology-partners .carousel-control-prev,
 .technology-partners .carousel-control-next {
     background-color: #0073cf;
@@ -616,7 +668,7 @@ body{
     transform: translateY(-50%);
 }
 
-/* Adjust Control Positions */
+
 .technology-partners .carousel-control-prev {
     left: 13%;
 }
@@ -625,7 +677,7 @@ body{
     right: 13%;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .technology-partners {
         padding-bottom: 70px;
@@ -642,7 +694,8 @@ body{
     }
 
     .technology-partners .carousel-control-next {
-        right: 5%;
+        right: 1%;
+       margin-top: 1%;
     }
 }
 
@@ -666,7 +719,7 @@ body{
     }
 
     .technology-partners .carousel-control-next {
-        right: 3%;
+        right: 0.1%;
     }
 }
 
@@ -698,7 +751,7 @@ body{
 
 
 /* outcome section */
-/* Outcome Section */
+
 .outcome-section {
     background-color: #f5f5f5;
     padding: 60px 20px;
@@ -713,7 +766,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* Text Section */
+
 .outcome-section .text-section {
     max-width: 40%;
 }
@@ -730,7 +783,7 @@ body{
     line-height: 1.5;
 }
 
-/* Stats Section */
+
 .outcome-section .stats {
     position: relative;
     max-width: 50%;
@@ -752,7 +805,7 @@ body{
     background-color: #cce7ff;
     color: #0077b6;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .outcome-section .white {
@@ -760,7 +813,7 @@ body{
     color: #00838f;
     position: absolute;
     top: 90px;
-    border-radius: 5px;
+    border-radius: 0px;
     z-index: 1;
 }
 
@@ -768,10 +821,9 @@ body{
     background-color: #bfe6dc;
     color: #4a4a4a;
     margin-top: 80px;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
     .outcome-section .container {
         flex-direction: column;
@@ -892,9 +944,6 @@ h2.award-title{
     transform: translateY(-50%);
 }
 
-.award-section .custom-control span {
-    /* filter: invert(1); */
-}
 
 .award-section .carousel-control-prev {
     left: -80px;
